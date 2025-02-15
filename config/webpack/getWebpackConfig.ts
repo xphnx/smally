@@ -3,9 +3,10 @@ import { getPluginsConfig } from './getPluginsConfig';
 import { getLoadersConfig } from './getLoadersConfig';
 import { getResolversConfig } from './getResolversConfig';
 import { BuildOptions } from './types/config';
+import { getDevSever } from './getDevServer';
 
 export const getWebpackConfig = (options: BuildOptions): Configuration => {
-    const { paths, mode } = options;
+    const { paths, mode, isDev } = options;
     
     return {
         mode,
@@ -20,5 +21,7 @@ export const getWebpackConfig = (options: BuildOptions): Configuration => {
             rules: getLoadersConfig(),
           },
         resolve: getResolversConfig(),
+        devtool: isDev ? 'inline-source-map' : undefined,
+        devServer: isDev ? getDevSever(options) : undefined
     }
 }
