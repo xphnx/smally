@@ -4,11 +4,6 @@ export enum Theme {
 }
 
 export interface ThemeContextData {
-  theme?: Theme;
-  toggleTheme?: (theme: Theme) => void;
-}
-
-export interface UseThemeResult {
   theme: Theme;
-  toggleTheme: () => void;
+  toggleTheme: (theme?: Theme) => void;
 }
