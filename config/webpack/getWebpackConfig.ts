@@ -4,6 +4,7 @@ import { getLoadersConfig } from './getLoadersConfig';
 import { getResolversConfig } from './getResolversConfig';
 import { BuildOptions } from './types/config';
 import { getDevSever } from './getDevServer';
+import path from 'path';
 
 export const getWebpackConfig = (options: BuildOptions): Configuration => {
     const { paths, mode, isDev } = options;

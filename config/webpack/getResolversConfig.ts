@@ -6,10 +6,9 @@ const sourceDirectoryPath = path.resolve(__dirname, '../../src');
 
 export const getResolversConfig = (options: BuildOptions): ResolveOptions => {
     return {
-        extensions: ['.tsx', '.ts', '.js', '.scss'],
+        extensions: ['.tsx', '.ts', '.js'],
         preferAbsolute: true,
         modules: [options.paths.src, 'node_modules'],
-        mainFiles: ['index'],
         alias: {
             '@app': path.resolve(sourceDirectoryPath, 'app'),
             '@entities': path.resolve(sourceDirectoryPath, 'entities'),

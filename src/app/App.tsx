@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import { LazyAbout, LazyMain } from '../pages';
+import { Link } from 'react-router-dom';
 import './styles/index.scss'
-import { classNames } from '../helpers/classNames';
+import { classNames } from '@shared/lib/classNames';
 import { useTheme } from './providers/ThemeProvider';
+import { AppRouter } from './providers/router';
+
 
 export const App: FC = () => {
   const { theme, toggleTheme} = useTheme();
@@ -13,10 +14,7 @@ export const App: FC = () => {
         <button onClick={() => toggleTheme()}>Toggle theme</button>
         <Link to="/">Main</Link>
         <Link to="/about">About</Link>
-        <Routes>
-            <Route path={'/about'} element={<LazyAbout />} />
-            <Route path={'/'} element={<LazyMain />} />
-        </Routes>
+        <AppRouter />
     </div>
   )
 }
