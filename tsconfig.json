@@ -11,14 +11,12 @@
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "paths": {
-        "*": ["./src/*"],
-        "@src/*": ["src/*"],
         "@app/*": ["src/app/*"],
         "@entities/*": ["src/entities/*"],
         "@features/*": ["src/features/*"],
-        "@pages": ["src/pages"],
         "@shared/*": ["src/shared/*"],
-        "@widgets/*": ["src/widgets/*"],
+        "@pages": ["src/pages"],
+        "@widgets": ["src/widgets"],
       },
     },
     "ts-node": {

@@ -12,7 +12,7 @@ export const getLoadersConfig = ({ isDev }: BuildOptions): RuleSetRule[] => {
           options: {
             modules: {
               auto: (path: string) => Boolean(path.includes('.module.')),
-              localIdentName: isDev ? '[path][name]__[local]' : '[hash.base64:8]' 
+              localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64]',
             },
           }
         },

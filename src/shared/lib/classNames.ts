@@ -7,4 +7,5 @@ export const classNames = (className: string, mods: Record<string, boolean | str
             .filter(([_, value]) => Boolean(value))
             .map(([className]) => className)
         ].join(' ')
+
 }

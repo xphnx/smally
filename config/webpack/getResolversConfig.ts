@@ -6,7 +6,7 @@ const sourceDirectoryPath = path.resolve(__dirname, '../../src');
 
 export const getResolversConfig = (options: BuildOptions): ResolveOptions => {
     return {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', 'jsx', '.js'],
         preferAbsolute: true,
         modules: [options.paths.src, 'node_modules'],
         alias: {
