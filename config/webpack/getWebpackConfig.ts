@@ -18,7 +18,7 @@ export const getWebpackConfig = (options: BuildOptions): Configuration => {
         },
         plugins: getPluginsConfig(options),
         module: {
-            rules: getLoadersConfig(),
+            rules: getLoadersConfig(options),
           },
         resolve: getResolversConfig(),
         devtool: isDev ? 'inline-source-map' : undefined,
