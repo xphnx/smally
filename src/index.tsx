@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import './styles/index.scss';
-import { App } from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './theme/ThemeProvider';
+import '@app/styles/index.scss';
+import { ThemeProvider } from '@app/providers/ThemeProvider';
+import { App } from '@app/App';
 
 const rootElement = document.getElementById('root');
 

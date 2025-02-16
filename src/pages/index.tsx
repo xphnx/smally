@@ -1,2 +1,2 @@
-export { LazyAbout} from './About/LazyAbout'
-export { LazyMain} from './Main/LazyMain'
+export { LazyAbout} from './About'
+export { LazyMain} from './Main'
