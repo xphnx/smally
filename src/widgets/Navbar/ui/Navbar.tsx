@@ -1,24 +1,21 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
 
 import { classNames } from '@shared/lib';
+import { AppLink } from '@shared/ui';
 
-import * as styles from './Navbar.module.scss';
-import { useTheme } from '@app/providers/ThemeProvider';
+import clsses from './Navbar.module.scss'
 
 interface NavbarProps {
   className?: string;
 }
 
 export const Navbar: FC<NavbarProps> = ({ className }) => {
-  const { toggleTheme } = useTheme();
-
-  
   return (
-    <div className={classNames(styles.hovered, {}, [className])}>
-        <button onClick={() => toggleTheme()}>Toggle theme</button>
-        <Link to="/">Main</Link>
-        <Link to="/about">About</Link>
+    <div className={classNames(clsses.navbar, {}, [className])}>
+        <div className={clsses.links}>
+          <AppLink to="/">Main</AppLink>
+          <AppLink to="/about">About</AppLink>
+        </div>
     </div>
   )
 }
